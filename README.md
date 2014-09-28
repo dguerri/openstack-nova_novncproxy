@@ -17,8 +17,9 @@ Role Variables
 | Name | Default value | Description | Note |
 |---  |---  |---  |--- |
 | `my_ip` | `{{ ansible_eth0.ipv4.address }}` | Management IP for nova-novncproxy ||
-| `vncserver_proxyclient_address` | `{{ my_ip }}` | The address to which proxy clients should connect ||
-| `novncproxy_base_url` | `"http://{{ vncserver_proxyclient_address }}:6080/vnc_auto.html"` | Desired novncproxy base_url ||
+| `vncserver_proxyclient_address` | `{{ my_ip }}` | The address to use to connect to the vnc proxy ||
+| `vncserver_proxy_address` | `{{ my_ip }}` | The address to which proxy clients should connect ||
+| `novncproxy_base_url` | `"http://{{ vncserver_proxy_address }}:6080/vnc_auto.html"` | Desired novncproxy base_url ||
 
 
 ### RabbitMQ (must exist)
