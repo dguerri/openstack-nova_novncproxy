@@ -45,6 +45,12 @@ Example Playbook
           rabbit_username: "openstack-nova"
           rabbit_pass: "{{ RABBIT_NOVA_PASS }}"
 
+---
+
+A complete Ansible playbook demo, which uses this role, is available here: <https://github.com/dguerri/vagrant-ansible-openstack>
+
+---
+
 License
 -------
 
