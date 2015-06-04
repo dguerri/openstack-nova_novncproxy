@@ -18,4 +18,4 @@
 #
 
 - name: Restart nova novncproxy
-  service: name=nova-novncproxy state=restarted
+  service: name={{ nova_novncproxy_service }} state=restarted

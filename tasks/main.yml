@@ -19,6 +19,7 @@
 
 - meta: flush_handlers
 
+- include: facts.yml
 - include: packages.yml
 - include: configuration.yml
 
