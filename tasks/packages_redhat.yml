@@ -17,8 +17,7 @@
 # limitations under the License.
 #
 
-- include: packages_redhat.yml
-  when: ansible_os_family == 'RedHat'
-
-- include: packages_debian.yml
-  when: ansible_os_family == 'Debian'
+- name: Install nova novncproxy
+  yum: name="{{ item }}" state=present
+  with_items:
+    - openstack-nova-novncproxy

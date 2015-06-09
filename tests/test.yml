@@ -1,0 +1,15 @@
+---
+
+- hosts: localhost
+  remote_user: root
+  roles:
+    - role: openstack-nova_novncproxy
+      my_ip: "localhost"
+      vncserver_proxyclient_address: "localhost"
+      vncserver_proxy_address: "localhost"
+      novncproxy_base_url: "http://localhost:6080/vnc_auto.html"
+      rabbit_hostname: localhost
+      rabbit_username: guest
+      rabbit_pass: guest
+      tags:
+        - nova-novncproxy
